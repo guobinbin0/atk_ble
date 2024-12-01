@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 搜索蓝牙设备的按钮 -->
+    <Button 
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="搜索蓝牙设备" />
+    
+    <!-- 显示蓝牙设备列表 -->
+    <ListView 
+        android:id="@+id/deviceListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    
+    <!-- 连接按钮和断开连接、监听接收按钮 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <!-- 连接蓝牙设备按钮 -->
+        <Button 
+            android:id="@+id/btnConnect"
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="连接蓝牙"
+            android:enabled="false" />
+        
+        <!-- 断开连接按钮 -->
+        <Button 
+            android:id="@+id/btnDisconnect"
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="断开连接"
+            android:enabled="false" />
+        
+        <!-- 监听接收按钮 -->
+        <Button 
+            android:id="@+id/btnListen"
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="启动监听"
+            android:enabled="false" />
+    </LinearLayout>
+
+    <!-- 发送消息的输入框和按钮 -->
+    <EditText 
+        android:id="@+id/editMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入消息" />
+    
+    <Button 
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发送消息"
+        android:enabled="false" />
+    
+    <!-- 显示接收消息的 TextView -->
+    <TextView 
+        android:id="@+id/receivedMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E0E0E0"
+        android:padding="8dp"
+        android:text="接收到的消息将显示在这里"
+        android:textSize="16sp" />
+</LinearLayout>
+
